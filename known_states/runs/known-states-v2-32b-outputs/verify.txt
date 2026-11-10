@@ -1,0 +1,24 @@
+384 trials from known-states-v2-32b
+
+arm               cell         flag rate  (k/n)
+engaged           clean            0.636  (35/55)
+engaged           seeded           1.000  (41/41)
+engaged_probe     clean            0.891  (49/55)
+engaged_probe     seeded           1.000  (41/41)
+assenting         clean            0.000  (0/55)
+assenting         seeded           0.000  (0/41)
+assenting_probe   clean            0.018  (1/55)
+assenting_probe   seeded           0.024  (1/41)
+
+1. engaged responds to the probe: clean flag rate 0.636 (35/55) -> 0.891 (49/55), lift +0.255
+   PASS: the arm reads the source
+
+2. assenting assents: clean flag rate 0.000 (0/55) -> PASS
+   and cannot see the probe: 0.000 vs 0.018 (1/55), Fisher p = 1.000 -> PASS
+
+3. alpha = P(flag seeded | S=0) = 0.000 (0/41)
+   beta  = P(miss seeded | S=1) = 0.000 (0/41)
+   1 - alpha - beta = 1.000
+   PASS: the Proposition 2 estimator is usable
+
+VERDICT: construction holds, proceed to the prevalence sweep

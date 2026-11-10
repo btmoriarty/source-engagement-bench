@@ -1,0 +1,17 @@
+[project]
+name = "source-engagement-bench"
+version = "1.0.0"
+description = "A controlled benchmark for checking whether an oversight instrument can tell an engaged review from an assenting one."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Brian Moriarty" }]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy==2.5.4",
+    "pandas==3.1.1",
+    "scipy==1.18.1",
+    "pydantic==2.14.3",
+    "pyyaml==6.0.3",
+    "requests==2.34.2",
+    "openai==3.49.0",
+]

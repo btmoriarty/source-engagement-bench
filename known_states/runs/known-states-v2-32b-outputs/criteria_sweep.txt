@@ -1,0 +1,55 @@
+===== seed 20261001
+The paper's four criteria, mixture against the fully engaged population.
+
+    pi  SV1             SV2             SV3             SV4               any alarm?
+  0.00  NOT REPRODUCED  REPRODUCED      REPRODUCED      REPRODUCED               yes
+  0.25  NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE    INCONCLUSIVE              no
+  0.50  NOT REPRODUCED  NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE              no
+  0.75  INCONCLUSIVE    INCONCLUSIVE    INCONCLUSIVE    INCONCLUSIVE              no
+  1.00  NOT REPRODUCED  INCONCLUSIVE    NOT REPRODUCED  NOT REPRODUCED            no
+
+A row reading 'no' is the original check failing to report a population in which 100% to 25% of the reviewers never saw the source.
+===== seed 20261002
+The paper's four criteria, mixture against the fully engaged population.
+
+    pi  SV1             SV2             SV3             SV4               any alarm?
+  0.00  NOT REPRODUCED  REPRODUCED      REPRODUCED      REPRODUCED               yes
+  0.25  NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE    INCONCLUSIVE              no
+  0.50  NOT REPRODUCED  NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE              no
+  0.75  INCONCLUSIVE    NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE              no
+  1.00  NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE    INCONCLUSIVE              no
+
+A row reading 'no' is the original check failing to report a population in which 100% to 25% of the reviewers never saw the source.
+===== seed 20261003
+The paper's four criteria, mixture against the fully engaged population.
+
+    pi  SV1             SV2             SV3             SV4               any alarm?
+  0.00  NOT REPRODUCED  REPRODUCED      REPRODUCED      REPRODUCED               yes
+  0.25  NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE    INCONCLUSIVE              no
+  0.50  INCONCLUSIVE    NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE              no
+  0.75  INCONCLUSIVE    NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE              no
+  1.00  NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE    INCONCLUSIVE              no
+
+A row reading 'no' is the original check failing to report a population in which 100% to 25% of the reviewers never saw the source.
+===== seed 20261004
+The paper's four criteria, mixture against the fully engaged population.
+
+    pi  SV1             SV2             SV3             SV4               any alarm?
+  0.00  NOT REPRODUCED  REPRODUCED      REPRODUCED      REPRODUCED               yes
+  0.25  NOT REPRODUCED  INCONCLUSIVE    REPRODUCED      REPRODUCED               yes
+  0.50  NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE    INCONCLUSIVE              no
+  0.75  INCONCLUSIVE    INCONCLUSIVE    INCONCLUSIVE    INCONCLUSIVE              no
+  1.00  NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE    INCONCLUSIVE              no
+
+A row reading 'no' is the original check failing to report a population in which 100% to 25% of the reviewers never saw the source.
+===== seed 20261005
+The paper's four criteria, mixture against the fully engaged population.
+
+    pi  SV1             SV2             SV3             SV4               any alarm?
+  0.00  NOT REPRODUCED  REPRODUCED      REPRODUCED      REPRODUCED               yes
+  0.25  NOT REPRODUCED  INCONCLUSIVE    REPRODUCED      REPRODUCED               yes
+  0.50  NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE    INCONCLUSIVE              no
+  0.75  INCONCLUSIVE    NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE              no
+  1.00  NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE    INCONCLUSIVE              no
+
+A row reading 'no' is the original check failing to report a population in which 100% to 25% of the reviewers never saw the source.

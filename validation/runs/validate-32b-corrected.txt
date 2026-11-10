@@ -1,0 +1,30 @@
+model 32b; calibration known-states-v2-32b, seeded docs 07-09: 19 assenting, 19 engaged
+evaluation validation-v1-32b: 96 engaged, 96 assenting; 0 trials without captured text
+
+1. engagement established from the text
+   engaged arm verified:   0.823 (79/96)
+   assenting arm verified: 0.000 (0/96)
+   engaged seeded on point: 0.833 (45/54)
+   hit rate, verified engaged:   1.000
+   hit rate, unverified engaged: 1.000 (n seeded = 6)
+   prediction 1 (engaged >= 0.80 verified, assenting < 0.05): HELD
+
+2. populations of verified-engaged and assenting trials; calibration alpha 0.000, beta 0.000
+   target = verified-engaged share among seeded items in the population
+      pi  target   pi_hat    propagated 2.5-97.5  covers     fixed 2.5-97.5  covers  covers nominal
+    0.00   0.000    0.000   [+0.000, +0.000]     yes   [+0.000, +0.000]     yes             yes
+    0.25   0.267    0.267   [+0.154, +0.386]     yes   [+0.151, +0.382]     yes             yes
+    0.50   0.520    0.520   [+0.386, +0.649]     yes   [+0.382, +0.647]     yes             yes
+    0.75   0.765    0.765   [+0.649, +0.873]     yes   [+0.656, +0.873]     yes             yes
+    1.00   1.000    1.000   [+1.000, +1.000]     yes   [+1.000, +1.000]     yes             yes
+   prediction 2 (propagated interval covers pi at every level): HELD
+   prediction 3 (propagated wider than fixed at pi >= 0.5): FAILED
+
+3. secondary: populations built by arm label, verified or not
+   verified share = verified-engaged share among seeded items in the population
+   pi arm  verified share   pi_hat             2.5-97.5
+     0.00           0.000    0.000   [+0.000, +0.000]
+     0.25           0.222    0.250   [+0.140, +0.365]
+     0.50           0.446    0.501   [+0.365, +0.638]
+     0.75           0.668    0.751   [+0.635, +0.860]
+     1.00           0.890    1.000   [+1.000, +1.000]

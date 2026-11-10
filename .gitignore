@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+known_states/runs/known-states-v2-32b/
+.venv/
+known_states/runs/known-states-v2-32b.stderr.log

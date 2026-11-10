@@ -1,0 +1,81 @@
+{
+  "trial_id": "known-states-v1-7b__faculty-reviewer-baseline__assenting__0007",
+  "trial_index": 7,
+  "experiment_id": "known-states-v1-7b",
+  "experiment_lifecycle_stage": "pilot",
+  "condition": "assenting",
+  "condition_label": null,
+  "persona_id": "faculty-reviewer-baseline",
+  "manifest_version": {
+    "manifest_id": "known-states-v1-7b",
+    "manifest_sha256": "960d6c80914697bcaf072d1cc751753e8c3530687d879db5986e8d82b9d4bc1c"
+  },
+  "model": {
+    "provider": "local",
+    "name": "qwen2.5:7b",
+    "version_returned_by_api": "qwen2.5:7b",
+    "max_tokens": 1024,
+    "temperature": 0.7,
+    "top_p": 1.0
+  },
+  "prompts": {
+    "agent_system": {
+      "registry_id": "faculty-reviewer-baseline",
+      "version": "v0.1.0"
+    },
+    "agent_user_template": {
+      "registry_id": "faculty-reviewer-prompt-baseline",
+      "version": "v0.1.0"
+    }
+  },
+  "input": {
+    "policy_document_id": "vch3-doc-01",
+    "time_budget_seconds": null,
+    "time_budget_signal": null,
+    "trial_context": "corpus=validity-check-hard-v3; document=vch3-doc-01; seeded_error=False; error_kind=none"
+  },
+  "events": [
+    {
+      "event_type": "trial_start",
+      "timestamp": "2026-10-01T14:57:22.305313Z"
+    },
+    {
+      "event_type": "agent_request_dispatched",
+      "timestamp": "2026-10-01T14:57:22.305352Z",
+      "request_tokens_prompt": 488,
+      "request_dispatch_latency_ms": 0
+    },
+    {
+      "event_type": "agent_response_received",
+      "timestamp": "2026-10-01T14:57:23.313208Z",
+      "response_tokens": 42,
+      "response_latency_ms": 1008,
+      "evidence_expansion_requests": null,
+      "rationale_text_length_chars": 136,
+      "planning_trace_depth": null
+    },
+    {
+      "event_type": "trial_end",
+      "timestamp": "2026-10-01T14:57:23.313232Z",
+      "decision": "accept",
+      "total_duration_ms": 1008,
+      "corrections_count": 0
+    }
+  ],
+  "cost": {
+    "input_tokens": 488,
+    "output_tokens": 42,
+    "input_cost_usd": null,
+    "output_cost_usd": null,
+    "total_cost_usd": null
+  },
+  "attention": {
+    "duration_ms": 1007,
+    "evidence_expansion_count": 0,
+    "swift_collapse_detected": false,
+    "trace_token_length": 0
+  },
+  "seed": 20260703,
+  "archive_schema_version": "1.0.1",
+  "archived_at": "2026-10-01T15:06:02.464871Z"
+}

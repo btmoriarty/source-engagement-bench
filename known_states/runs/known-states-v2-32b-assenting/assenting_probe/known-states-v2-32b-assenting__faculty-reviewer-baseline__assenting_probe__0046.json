@@ -1,0 +1,81 @@
+{
+  "trial_id": "known-states-v2-32b-assenting__faculty-reviewer-baseline__assenting_probe__0046",
+  "trial_index": 46,
+  "experiment_id": "known-states-v2-32b-assenting",
+  "experiment_lifecycle_stage": "pilot",
+  "condition": "assenting_probe",
+  "condition_label": null,
+  "persona_id": "faculty-reviewer-baseline",
+  "manifest_version": {
+    "manifest_id": "known-states-v2-32b-assenting",
+    "manifest_sha256": "f7a848d538055ec849fff4d27d8d35bc427bfc9b2b11d2645305b567728df385"
+  },
+  "model": {
+    "provider": "local",
+    "name": "qwen2.5:32b-instruct",
+    "version_returned_by_api": "qwen2.5:32b-instruct",
+    "max_tokens": 1024,
+    "temperature": 0.7,
+    "top_p": 1.0
+  },
+  "prompts": {
+    "agent_system": {
+      "registry_id": "faculty-reviewer-baseline",
+      "version": "v0.1.0"
+    },
+    "agent_user_template": {
+      "registry_id": "faculty-reviewer-prompt-baseline",
+      "version": "v0.1.0"
+    }
+  },
+  "input": {
+    "policy_document_id": "vch3-doc-06",
+    "time_budget_seconds": null,
+    "time_budget_signal": null,
+    "trial_context": "corpus=validity-check-hard-v3; document=vch3-doc-06; seeded_error=False; error_kind=none"
+  },
+  "events": [
+    {
+      "event_type": "trial_start",
+      "timestamp": "2026-10-01T22:51:10.990557Z"
+    },
+    {
+      "event_type": "agent_request_dispatched",
+      "timestamp": "2026-10-01T22:51:10.990858Z",
+      "request_tokens_prompt": 507,
+      "request_dispatch_latency_ms": 0
+    },
+    {
+      "event_type": "agent_response_received",
+      "timestamp": "2026-10-01T22:51:15.474403Z",
+      "response_tokens": 46,
+      "response_latency_ms": 4483,
+      "evidence_expansion_requests": null,
+      "rationale_text_length_chars": 155,
+      "planning_trace_depth": null
+    },
+    {
+      "event_type": "trial_end",
+      "timestamp": "2026-10-01T22:51:15.474587Z",
+      "decision": "accept",
+      "total_duration_ms": 4484,
+      "corrections_count": 0
+    }
+  ],
+  "cost": {
+    "input_tokens": 507,
+    "output_tokens": 46,
+    "input_cost_usd": null,
+    "output_cost_usd": null,
+    "total_cost_usd": null
+  },
+  "attention": {
+    "duration_ms": 4484,
+    "evidence_expansion_count": 0,
+    "swift_collapse_detected": false,
+    "trace_token_length": 0
+  },
+  "seed": 20260703,
+  "archive_schema_version": "1.0.1",
+  "archived_at": "2026-10-01T22:54:43.736301Z"
+}

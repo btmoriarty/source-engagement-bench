@@ -1,0 +1,28 @@
+schema_version: v0.1.0
+id: faculty-reviewer-prompt-baseline
+version: v0.1.0
+kind: user_template
+user_template: |-
+  Review the AI-drafted summary below against the source excerpt it claims to summarize. Decide whether the summary faithfully and completely represents the source.
+  {time_budget_signal}
+  ----- SOURCE EXCERPT AND AI SUMMARY -----
+  {policy_document_text}
+  ----- END -----
+
+  Give your verdict as a fenced JSON object on the final line, in exactly this shape:
+  ```json
+  {"decision": "accept | revise | reject", "corrections": ["..."], "rationale": "..."}
+  ```
+  Use "accept" if the summary is faithful and complete, "revise" if it needs specific fixes, and "reject" if it materially misrepresents the source. Put each distinct problem as one string in "corrections" (use an empty list if there are none), and keep "rationale" to a few sentences.
+required_placeholders:
+  - time_budget_signal
+  - policy_document_text
+license: internal-hosl-2026
+change_log:
+  - version: v0.1.0
+    date: '2026-07-09'
+    author: btmoriarty
+    note: 'Initial registry record; formalized from the interim inline user template (PR #27); written to the outcomes.py agent-output contract.'
+notes: >-
+  Shared review task template. Filled by literal token replacement, not
+  str.format, because it embeds a JSON example whose braces must survive.

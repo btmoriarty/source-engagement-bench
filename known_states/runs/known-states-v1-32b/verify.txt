@@ -1,0 +1,25 @@
+Installed 11 packages in 134ms
+384 trials from known-states-v1-32b
+
+arm               cell         flag rate  (k/n)
+engaged           clean            0.636  (35/55)
+engaged           seeded           1.000  (41/41)
+engaged_probe     clean            0.891  (49/55)
+engaged_probe     seeded           1.000  (41/41)
+assenting         clean            0.364  (20/55)
+assenting         seeded           0.171  (7/41)
+assenting_probe   clean            0.345  (19/55)
+assenting_probe   seeded           0.073  (3/41)
+
+1. engaged responds to the probe: clean flag rate 0.636 (35/55) -> 0.891 (49/55), lift +0.255
+   PASS: the arm reads the source
+
+2. assenting assents: clean flag rate 0.364 (20/55) -> FAIL, it is abstaining rather than assenting
+   and cannot see the probe: 0.364 vs 0.345 (19/55), Fisher p = 1.000 -> PASS
+
+3. alpha = P(flag seeded | S=0) = 0.171 (7/41)
+   beta  = P(miss seeded | S=1) = 0.000 (0/41)
+   1 - alpha - beta = 0.829
+   PASS: the Proposition 2 estimator is usable
+
+VERDICT: construction does not hold, stop and fix the arm that failed

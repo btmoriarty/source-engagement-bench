@@ -1,0 +1,12 @@
+pure arms: engaged H=1.000 F=0.636 | assenting H=0.171 F=0.364
+alpha=0.171  beta=0.000  1-alpha-beta=0.829
+
+    pi       H       F   d-prime   pi_hat          [95% CI]   recovers pi
+  0.00   0.173   0.364    -0.589    0.003  [-0.125, +0.159]           yes
+  0.25   0.381   0.431    -0.129    0.254  [+0.080, +0.439]           yes
+  0.50   0.583   0.500     0.211    0.498  [+0.303, +0.674]           yes
+  0.75   0.795   0.568     0.646    0.752  [+0.589, +0.890]           yes
+  1.00   1.000   0.635     1.914    1.000  [+1.000, +1.000]           yes
+
+d-prime rises monotonically with prevalence: yes
+pi_hat covers the true prevalence at every level: yes

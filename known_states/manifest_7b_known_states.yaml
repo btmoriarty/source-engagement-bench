@@ -1,0 +1,86 @@
+schema_version: v0.1.1
+experiment:
+  id: known-states-v1-7b
+  name: Known-states study, constructed engaged and assenting arms
+  description: 'Known-states study on qwen2.5:7b. Engaged reviewers receive the source and the summary and must name the source span their verdict turns on; assenting reviewers receive the summary alone, under assenting instruction v1.'
+  owner: btmoriarty
+  project_line: p2-sim
+  hypothesis_id: SV1
+  lifecycle_stage: pilot
+  status: ready
+  run_date: 2026-09-29
+model:
+  provider: local
+  endpoint_profile: standard
+  name: qwen2.5:7b
+  version_policy: pinned
+  max_tokens: 1024
+  temperature: 0.7
+  top_p: 1.0
+prompts:
+  agent_system:
+    registry_id: faculty-reviewer-baseline
+    version: v0.1.0
+  agent_user_template:
+    registry_id: faculty-reviewer-prompt-baseline
+    version: v0.1.0
+    required_variables:
+    - time_budget_signal
+    - policy_document_text
+personas:
+- id: faculty-reviewer-baseline
+  version: v0.1.0
+  description: Domain-naive faculty reviewer.
+conditions:
+- name: engaged
+  token_budget: null
+  time_pressure_ms: null
+  explanation_visible: true
+- name: assenting
+  token_budget: null
+  time_pressure_ms: null
+  explanation_visible: true
+- name: engaged_probe
+  token_budget: null
+  time_pressure_ms: null
+  explanation_visible: true
+- name: assenting_probe
+  token_budget: null
+  time_pressure_ms: null
+  explanation_visible: true
+sample:
+  trials_per_condition: 96
+  max_parallel_trials: 1
+outcomes:
+  primary:
+  - corrections_count
+  - decision_distribution
+  secondary:
+  - rationale_text_length_chars
+telemetry:
+  hooks:
+  - trial_start
+  - agent_request_dispatched
+  - agent_response_received
+  - trial_end
+budget:
+  cap_usd: 1.0
+  currency: USD
+  alert_at_percent: 100
+  halt_policy: projected_spend_reaches_cap
+  on_halt: finish_inflight_trials
+random:
+  seed: 20260703
+  determinism_scope:
+  - trial_order
+  - condition_assignment
+  - archive_paths
+archive:
+  base_path: archives/{experiment.id}/{condition.id}/{trial.id}.json
+  atomic: true
+corpus:
+  fixture_id: validity-check-hard-v3
+  path: corpus_hard/corpus_hard_v3
+  seeded_error_flag: true
+  notes: 'Hand-written corpus of fictional university policy; see corpus_hard/.'
+notes: 'Cost is $0 on a local model.'

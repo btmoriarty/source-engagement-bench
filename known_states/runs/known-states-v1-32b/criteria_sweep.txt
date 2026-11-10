@@ -1,0 +1,10 @@
+The paper's four criteria, mixture against the fully engaged population.
+
+    pi  SV1             SV2             SV3             SV4               any alarm?
+  0.00  INCONCLUSIVE    NOT REPRODUCED  REPRODUCED      REPRODUCED               yes
+  0.25  INCONCLUSIVE    NOT REPRODUCED  REPRODUCED      REPRODUCED               yes
+  0.50  INCONCLUSIVE    NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE              no
+  0.75  NOT REPRODUCED  INCONCLUSIVE    INCONCLUSIVE    INCONCLUSIVE              no
+  1.00  NOT REPRODUCED  INCONCLUSIVE    NOT REPRODUCED  NOT REPRODUCED            no
+
+A row reading 'no' is the original check failing to report a population in which 100% to 25% of the reviewers never saw the source.
